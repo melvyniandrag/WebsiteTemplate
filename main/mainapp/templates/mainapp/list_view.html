@@ -1,0 +1,55 @@
+{% extends "mainapp/base.html" %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+
+        <div class="row">
+            <div class="col">
+                <div  class="header_with_button">
+                    <h2 class="list_section_header">Data Section 1</h2>
+                    <button class="btn btn-primary list_section_button" type="button" data-toggle="collapse" data-target="#dataSection1" aria-expanded="false" aria-controls="collapseExample">
+                        Expand/Collapse
+                    </button>
+                </div>
+                <hr/>
+                <div class="collapse" id="dataSection1">
+                    <p>
+                        Put some data here   
+                    </p>
+                    <ul>
+                        <li>Data 1</li>
+                        <li>Data 2</li>
+                        <li>Data 3</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div  class="header_with_button">
+                    <h2 class="list_section_header">Data Section 2</h2>
+                    <button class="btn btn-primary list_section_button" type="button" data-toggle="collapse" data-target="#dataSection2" aria-expanded="false" aria-controls="collapseExample">
+                        Expand/Collapse
+                    </button>
+                </div>
+                <hr/>
+                <div class="collapse" id="dataSection2">
+                    <p>
+                        Put some other data here   
+                    </p>
+                    <ul>
+                        <li>Data 1</li>
+                        <li>Data 2</li>
+                        <li>Data 3</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+{% endblock content %}

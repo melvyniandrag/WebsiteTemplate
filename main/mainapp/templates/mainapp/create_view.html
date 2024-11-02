@@ -1,0 +1,25 @@
+{% extends "mainapp/base.html" %}
+
+{% block content %}
+
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form method="POST" enctype="multipart/form-data">
+                 
+                    <!-- Security token -->
+                    {% csrf_token %}
+                 
+                    <!-- Using the formset -->
+                    {{ form.as_p }}
+                     
+                    <input type="submit" value="Submit">
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

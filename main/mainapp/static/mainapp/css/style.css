@@ -1,0 +1,49 @@
+body {
+  margin-top: 105px; 
+}
+
+.navbar {
+  box-shadow: 2px 2px #00ffff;
+  opacity: 1;
+  background: #ffffff;
+  .navbar .nav-item {
+    font-size: 1.4rem;
+    padding-right: 1.4rem;
+  }
+}
+
+
+#showcase {
+  position: relative;
+  min-height: 600px; }
+  #showcase .primary-overlay {
+    background: rgba(191, 99, 63, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+.secondaryButton {
+  background: #14ac14;
+  color: #fff; }
+
+.secondaryButton:hover {
+	color: #000000;
+} 
+
+
+.header_with_button{
+  display: flex;
+  background: #bbbbbb;
+  padding: 2rem ;
+  border-radius: 5px;
+}
+
+.list_section_header{
+  margin: 0;
+}
+
+.list_section_button{
+  margin-left: auto;
+}

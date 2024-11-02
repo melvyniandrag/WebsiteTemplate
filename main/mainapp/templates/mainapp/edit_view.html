@@ -1,0 +1,26 @@
+{% extends "mainapp/base.html" %}
+
+{% block content %}
+
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+
+                <form method="POST" enctype="multipart/form-data">
+                    <!-- Security token by Django -->
+                    {% csrf_token %}
+             
+                    <!-- form as paragraph -->
+                    {{ form.as_p }}
+             
+                    <input type="submit" value="Update">
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}
