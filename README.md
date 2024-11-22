@@ -10,8 +10,14 @@ This template uses
 
 ## Deploy instructions
 * Get a server and install Docker Engine ( formerly Docker CE )
+```
+sudo apt install nginx
+```
 * build the docker container
 * run the docker container
+
+
+
 
 ### Docker instructions
 
