@@ -21,17 +21,20 @@ This tutorial shows you how to make a simple website with a handful of libraries
 
 1. Test out the site :
 ```
- $cd WebsiteTemplate/main
- $ls
+ user@machine$ cd WebsiteTemplate/main
+ user@machine$ ls
  # there should be a manage.py there.
- $python3 manage.py runserver 0.0.0.0:80
+ user@machine$ python3 manage.py runserver 0.0.0.0:80
 ```
 1. This will give an error in the browser, we need to set an environment variable. Kill the webserver with (CTRL+C).
 1. run this:e
 ```
 user@machine$ export website_secret_key="put whatever random text you want"
 ```
-1. Run the server again on 0.0.0.0:80
+1. Run the server again on 0.0.0.0:80. Run it like this:
+```
+user@machine$ python3 manage.py runserver 0.0.0.0:80
+```
 1. Check again in your browser
 1. Ta da!
 1. kill the website (CTRL+C)
