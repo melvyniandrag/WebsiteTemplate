@@ -20,10 +20,12 @@ This tutorial shows you how to make a simple website with a handful of libraries
 ## Run with the built in debug webserver
 
 1. Test out the site :
+```
  $cd WebsiteTemplate/main
  $ls
  # there should be a manage.py there.
  $python3 manage.py runserver 0.0.0.0:80
+```
 1. This will give an error in the browser, we need to set an environment variable
 1. run this: $export website_secret_key="put whatever random text you want"
 1. Run the server again on 0.0.0.0:80
