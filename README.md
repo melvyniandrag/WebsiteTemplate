@@ -13,9 +13,9 @@ This tutorial shows you how to make a simple website with a handful of libraries
 1. create a droplet
 2. apt install git
 3. fork the website tutorial repo https://github.com/melvyniandrag/WebsiteTemplate/tree/master#
-4. clone your fork to your droplet. 
-5. cd WebsiteTemplate
-6. apt install -y python3-dev python3-pip  python3-django
+4. clone your fork to your droplet. `user@machine$ git clone https_url_of_your_fork`
+6. cd WebsiteTemplate
+7. apt install -y python3-dev python3-pip  python3-django
 
 ## Run with the built in debug webserver
 
