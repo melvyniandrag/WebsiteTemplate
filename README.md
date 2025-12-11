@@ -43,25 +43,26 @@ user@machine$ python3 manage.py runserver 0.0.0.0:80
 ## Now let's run with a proper webserver: apache2
 
 1. Now lets use a proper webserver: apache2
-1. apt install -y apache2 libapache2-mod-wsgi-py3
+1. ```apt install -y apache2 libapache2-mod-wsgi-py3```
 1. Go to your ipaddress in your browser. You see the default apache page!
 1. Now lets replace that default page with our real website...
-1. cp -r main /var/www/main
-1. cp my_website.conf /etc/apache2/sites-available
+1. ```cp -r main /var/www/main```
+1. ```cp my_website.conf /etc/apache2/sites-available```
 1. have a look at my_website.conf. There is some interesting stuff in there, but we won't discuss it.
-1. chown -R www-data:www-data /var/www/main
-1. cd /var/www/main
-1. python3 manage.py collectstatic --noinput
-1. a2enmod wsgi
-1. a2dissite 000-default.conf
-1. a2ensite my_website.conf
-1. reload apache2 as instructed systemctl reload apache2 // note that didnt work...  do systemctl restart apache2
+1. ```chown -R www-data:www-data /var/www/main```
+1. ```cd /var/www/main```
+1. ```python3 manage.py collectstatic --noinput```
+1. ```a2enmod wsgi```
+1. ```a2dissite 000-default.conf```
+1. ```a2ensite my_website.conf```
+1. reload apache2 as instructed systemctl reload apache2 // note that didnt work...  do ```systemctl restart apache2```
 1. check your browser! Go to the ip address of your droplet. You may need to reload with CTRL+F5 in your browser, or however you clear the cache in the browser you use.
 1. ERROR! we previously exported the environment variable with export website_secret_key="some stuff"...
 and you can see the env var is set if you echo $website_secret_key....
 So what happened? Have a look at /var/log/apache2/error.log and see if you can spot the error message...  it says SECRET_KEY is missing!
 1. Open up /var/www/main/main/settings.py and you will see that SECRET_KEY comes from an environment var. We need to make this environment var visible to apache 2.
-1. add the line export website_secret_key="something something" to the bottom of /etc/apache2/envvars and then restart apache2. You should see that the website now works! 
+1. add the line export website_secret_key="something something" to the bottom of /etc/apache2/envvars and then restart apache2. 
+1. You should see that the website now works! 
 
 You may have noticed that the steps we just did are a tremendous pain in the butt. You have to copy files all over, change ownership, install stuff, and run a handful of commands. What a pain, really boring to do this over and over, and it's easy for you to screw it up. And for a real website, you would do much much much more that what we did above. Very time consuming and error prone.
 
